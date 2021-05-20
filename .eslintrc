@@ -1,0 +1,24 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "root": true,
+  "plugins": ["prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:security/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": 1, // warning
+    "prettier/prettier": 2, // error
+    // Object parameters are already parsed and validated by the generator, so
+    // this security concern can be neglected.
+    "security/detect-object-injection": 0 // off
+  }
+}
